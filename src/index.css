@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,81 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+@font-face {
+  font-family: 'PT Root UI';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./assets/fonts/PTRootUi/PT-Root-UI_Light.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'PT Root UI';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./assets/fonts/PTRootUi/PT-Root-UI_Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  font-weight: 500;
+  font-style: normal;
+  src: url('./assets/fonts/PTRootUi/PT-Root-UI_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./assets/fonts/PTRootUi/PT-Root-UI_Bold.woff2') format('woff2');
+}
+:root {
+  font-family: 'PT Root UI';
+  letter-spacing: 0.00938em;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #979797;
+  border-radius: 10px;
+}
+
+body {
+  /*min-width: 1280px;*/
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  background-color: #FFF;
+  --appbar-height: 48px;
+  --appbar-height-mobile: 32px;
+  --footer-height: 32px
+  font-family: 'PT Root UI', sans-serif;
+}
+
+div#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
