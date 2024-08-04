@@ -1,7 +1,7 @@
 {
   "name": "develop-polygon",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,6 +19,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.0",
+    "@types/node": "^22.0.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",

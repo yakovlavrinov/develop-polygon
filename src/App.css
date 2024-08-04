@@ -1,8 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+    font-family: 'PT Root UI';
+    font-weight: 300;
+    font-style: normal;
+    src: url('./assets/fonts/PTRootUi/PT-Root-UI_Light.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'PT Root UI';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./assets/fonts/PTRootUi/PT-Root-UI_Regular.woff2') format('woff2');
+}
 
+@font-face {
+    font-family: 'PT Root UI';
+    font-weight: 500;
+    font-style: normal;
+    src: url('./assets/fonts/PTRootUi/PT-Root-UI_Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    font-weight: 600;
+    font-style: normal;
+    src: url('./assets/fonts/PTRootUi/PT-Root-UI_Bold.woff2') format('woff2');
+}
