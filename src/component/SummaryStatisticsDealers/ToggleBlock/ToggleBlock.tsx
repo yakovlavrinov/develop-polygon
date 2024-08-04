@@ -4,13 +4,13 @@ import { Box } from "@mui/material";
 import { ToggleButton } from "./ToggleButton/ToggleButton";
 import summaryStatisticsDealersStore from "../store/SummaryStatisticsDealersStore";
 
-type Buttons = {
+export type Buttons = {
     key: string;
     label: string;
 };
 
 export const ToggleBlock: FC = observer(() => {
-    const { subpage, activeToggleBlockItem, setActiveToggleBlockItem } = summaryStatisticsDealersStore;
+    const { subpage } = summaryStatisticsDealersStore;
 
     const { today, period, total } = subpage;
 
@@ -24,12 +24,7 @@ export const ToggleBlock: FC = observer(() => {
         <Box>
             <Box sx={{ display: "flex", gap: "4px" }}>
                 {buttons.map(({ key, label }) => (
-                    <ToggleButton
-                        key={key}
-                        isActive={activeToggleBlockItem === key}
-                        onClick={() => setActiveToggleBlockItem(key)}
-                        label={label}
-                    />
+                    <ToggleButton key={key} active={key} label={label} />
                 ))}
             </Box>
         </Box>

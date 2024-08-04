@@ -2,19 +2,24 @@ import { FC } from "react";
 import { observer } from "mobx-react";
 import { Box, Typography } from "@mui/material";
 import { toggleButtonBoxStyles, toggleButtonTextStyles } from "./ToggleButtonStyles";
-import newIcon from 'src/assets/images/orderStatuses/new.svg'
-import newGrayIcon from 'src/assets/images/orderStatuses/newGray.svg'
+import newIcon from "src/assets/images/orderStatuses/new.svg";
+import newGrayIcon from "src/assets/images/orderStatuses/newGray.svg";
+import summaryStatisticsDealersStore from "../../store/SummaryStatisticsDealersStore";
 
 interface ToggleButtonProps {
-    isActive: boolean;
-    onClick: () => void;
     label: string;
+    active: string;
 }
 
-export const ToggleButton: FC<ToggleButtonProps> = observer(({ isActive, onClick, label }) => {
+export const ToggleButton: FC<ToggleButtonProps> = observer(({ label, active }) => {
+    const { activeToggleBlockItem, setActiveToggleBlockItem } = summaryStatisticsDealersStore;
+
+    console.log(label, active)
+
+    const isActive = activeToggleBlockItem === active;
     return (
         <Box
-            onClick={onClick}
+            onClick={() => setActiveToggleBlockItem(active)}
             sx={{
                 ...toggleButtonBoxStyles,
                 background: isActive ? "rgba(0, 0, 0, 0.15)" : null,
