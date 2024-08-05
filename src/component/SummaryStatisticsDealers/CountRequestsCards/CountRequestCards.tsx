@@ -95,7 +95,7 @@ export const CountRequestCards = () => {
                 justifyContent: "space-between",
                 gap: "4px",
                 borderRadius: "8px",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+                boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.15)",
                 padding: "16px",
                 overflowX: "auto",
                 overflowY: "hidden",
