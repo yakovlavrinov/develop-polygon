@@ -14,7 +14,7 @@ interface ToggleButtonProps {
 export const ToggleButton: FC<ToggleButtonProps> = observer(({ label, active }) => {
     const { activeToggleBlockItem, setActiveToggleBlockItem } = summaryStatisticsDealersStore;
 
-    console.log(label, active)
+    console.log(label, active);
 
     const isActive = activeToggleBlockItem === active;
     return (
@@ -22,7 +22,7 @@ export const ToggleButton: FC<ToggleButtonProps> = observer(({ label, active }) 
             onClick={() => setActiveToggleBlockItem(active)}
             sx={{
                 ...toggleButtonBoxStyles,
-                background: isActive ? "rgba(0, 0, 0, 0.15)" : null,
+                background: isActive ? "rgba(246, 246, 246, 1)" : null,
             }}
         >
             <Box component="img" alt="" src={isActive ? newIcon : newGrayIcon} />

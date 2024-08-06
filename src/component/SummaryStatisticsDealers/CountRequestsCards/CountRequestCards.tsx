@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect, FC } from "react";
 import { Box } from "@mui/material";
 import { CountCard } from "./CountCard/CountCard";
 
@@ -9,10 +9,18 @@ import impossibleIcon from "src/assets/images/countRequestCards/impossibleIcon.s
 import installedIcon from "src/assets/images/countRequestCards/installedIcon.svg";
 import timeIcon from "src/assets/images/countRequestCards/timeIcon.svg";
 
-export const CountRequestCards = () => {
+export type Card = {
+    title: string;
+    count: string;
+    colorCount: string;
+    icon: string;
+    detail: string;
+};
+
+export const CountRequestCards: FC = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    const cards = [
+    const cards: Card[] = [
         {
             title: "Назначены дилерам",
             count: "12380",
@@ -105,9 +113,17 @@ export const CountRequestCards = () => {
         >
             {cards.map((card) => {
                 const { title, count, colorCount, icon, detail } = card;
-                return <CountCard key={title} title={title} count={count} colorCount={colorCount} icon={icon} detail={detail} />;
+                return (
+                    <CountCard
+                        key={title}
+                        title={title}
+                        count={count}
+                        colorCount={colorCount}
+                        icon={icon}
+                        detail={detail}
+                    />
+                );
             })}
         </Box>
     );
 };
-

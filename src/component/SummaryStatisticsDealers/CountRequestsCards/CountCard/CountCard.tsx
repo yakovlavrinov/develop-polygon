@@ -2,14 +2,9 @@ import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 
 import questionIcon from "src/assets/images/countRequestCards/questionIcon.svg";
+import { Card } from "../CountRequestCards";
 
-interface CountCardProps {
-    icon: string;
-    title: string;
-    count: string;
-    detail: string;
-    colorCount: string;
-}
+interface CountCardProps extends Card {}
 
 export const CountCard: FC<CountCardProps> = ({ icon, title, count, /*detail,*/ colorCount }) => {
     return (
