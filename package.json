@@ -1,7 +1,7 @@
 {
   "name": "develop-polygon",
   "private": true,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,7 @@
     "@mui/material": "^5.16.6",
     "mobx": "^6.13.1",
     "mobx-react": "^9.1.1",
+    "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
